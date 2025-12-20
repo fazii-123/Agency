@@ -1,0 +1,649 @@
+
+.services-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+  border-radius: 35px;
+}
+
+.services-hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px;
+  border-radius: 35px;
+  max-width: 1100px;
+  text-align: left;
+  margin-top: 280px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+/* =========================
+   SERVICES CAROUSEL
+========================= */
+.services-carousel {
+  background: white;
+  text-align: center;
+  padding: 75px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-title {
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.carousel-subtitle {
+  color: #666;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  height: 420px;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 340px;
+  height: 370px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.7s ease;
+  transform-style: preserve-3d;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 22px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+   background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.carousel-card.active {
+  transform: translateX(0) scale(1) rotateY(0);
+  opacity: 1;
+  z-index: 3;
+}
+
+.carousel-card.left {
+  transform: translateX(-250px) scale(0.9) rotateY(0);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.carousel-card.right {
+  transform: translateX(250px) scale(0.9) rotateY(0);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.carousel-card.hidden {
+  opacity: 0;
+  transform: translateX(0) scale(0.5) rotateY(0);
+  z-index: 1;
+}
+
+/* =========================
+   NAV BUTTONS
+========================= */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left-btn {
+  left: 5%;
+}
+
+.right-btn {
+  right: 5%;
+}
+
+.nav-btn:hover {
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.3);
+}
+
+/* =========================
+   ABOUT SIMPLE SECTION
+========================= */
+.about-simple {
+  background: #0e0e0e;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 20px;
+  border-radius: 40px;
+}
+
+#simple{
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-simple p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-btn-simple {
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.work-btn-simple:hover {
+     background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* ===============================================
+   RESPONSIVE DESIGN - SERVICES PAGE
+   =============================================== */
+
+/* Desktop (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .services-hero .overlay {
+    margin-left: 80px;
+    padding: 50px;
+  }
+  
+  .carousel-card {
+    width: 320px;
+    height: 350px;
+  }
+}
+
+/* Tablet Large (1025px - 1200px) */
+@media (max-width: 1200px) {
+  .services-hero {
+    height: 75vh;
+    margin-top: 60px;
+  }
+  
+  .services-hero .overlay {
+    margin-left: 60px;
+    padding: 40px;
+    max-width: 900px;
+  }
+  
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-title {
+    font-size: 2.2rem;
+  }
+  
+  .nav-btn {
+    font-size: 1.8rem;
+    padding: 6px 14px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .services-hero {
+    height: 60vh;
+    margin-top: 60px;
+    border-radius: 30px;
+  }
+  
+  .services-hero .overlay {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 35px;
+    margin-top: 200px;
+    border-radius: 25px;
+  }
+  
+  .services-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .services-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .services-carousel {
+    padding: 60px 0;
+  }
+  
+  .carousel-title {
+    font-size: 2rem;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+  
+  .carousel-container {
+    height: auto;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  
+  /* Reset all card states to show as a vertical list */
+  .carousel-card,
+  .carousel-card.active,
+  .carousel-card.left,
+  .carousel-card.right,
+  .carousel-card.hidden {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto 30px;
+    opacity: 1;
+    transform: none !important;
+    display: block;
+    top: auto;
+    left: auto;
+    pointer-events: auto;
+  }
+
+  .carousel-card img {
+    height: 250px;
+  }
+  
+  .about-simple {
+    padding: 80px 20px;
+    border-radius: 30px;
+  }
+  
+  #simple {
+    font-size: 2.4rem;
+  }
+  
+  .about-simple p {
+    font-size: 1rem;
+  }
+
+  /* Hide nav buttons */
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* Tablet Small & Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .services-hero {
+    height: 50vh;
+    margin-top: 30px;
+    border-radius: 20px;
+  }
+  
+  .services-hero .overlay {
+    margin: 150px 20px 30px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .services-hero p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .services-carousel {
+    padding: 50px 0;
+  }
+  
+  .carousel-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+  
+  .carousel-container {
+    height: 380px;
+  }
+  
+  .carousel-card {
+    width: 280px;
+    height: 350px;
+  }
+  
+  .carousel-card img {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 18px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+  }
+  
+  .explore-btn {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* Hide side cards on tablet/mobile */
+  .carousel-card.left,
+  .carousel-card.right {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+  
+  .nav-btn {
+    font-size: 1.5rem;
+    padding: 5px 12px;
+  }
+  
+  .left-btn {
+    left: 2%;
+  }
+  
+  .right-btn {
+    right: 2%;
+  }
+  
+  .about-simple {
+    padding: 60px 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+  }
+  
+  #simple {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-simple p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .work-btn-simple {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .services-hero {
+    height: 45vh;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .services-hero .overlay {
+    margin: 120px 15px 20px;
+    padding: 25px;
+    border-radius: 15px;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .services-hero p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  
+  .services-carousel {
+    padding: 40px 0;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  
+  .carousel-container {
+    height: 380px;
+  }
+  
+  .carousel-card {
+    width: 85%;
+    max-width: 280px;
+    height: 360px;
+  }
+  
+  .carousel-card img {
+    height: 150px;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-content p {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+  
+  .explore-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  
+  /* Show only active card on mobile */
+  .carousel-card.left,
+  .carousel-card.right,
+  .carousel-card.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+  }
+  
+  .carousel-card.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  
+  .nav-btn {
+    font-size: 1.3rem;
+    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+  
+  .left-btn {
+    left: 5px;
+  }
+  
+  .right-btn {
+    right: 5px;
+  }
+  
+  .about-simple {
+    padding: 50px 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+  
+  #simple {
+    font-size: 1.7rem;
+  }
+  
+  .about-simple p {
+    font-size: 0.9rem;
+    margin-bottom: 1.3rem;
+  }
+  
+  .work-btn-simple {
+    padding: 11px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Extra Small (320px - 375px) */
+@media (max-width: 375px) {
+  .services-hero {
+    height: 50vh;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.4rem;
+  }
+  
+  .services-hero p {
+    font-size: 0.8rem;
+  }
+  
+  .carousel-title {
+    font-size: 1.3rem;
+  }
+  
+  .carousel-card {
+    width: 90%;
+    max-width: 260px;
+    height: 350px;
+  }
+  
+  .carousel-card img {
+    height: 140px;
+  }
+  
+  .card-content {
+    padding: 14px;
+  }
+  
+  .card-content h3 {
+    font-size: 1rem;
+  }
+  
+  .card-content p {
+    font-size: 0.8rem;
+  }
+  
+  #simple {
+    font-size: 1.5rem;
+  }
+  
+  .about-simple p {
+    font-size: 0.85rem;
+  }
+  
+  .work-btn-simple {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+

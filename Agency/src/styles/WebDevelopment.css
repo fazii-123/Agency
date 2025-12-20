@@ -1,0 +1,364 @@
+/* 🌐 Base Styling (Desktop Default) */
+.webdev-hero,
+.webdev-section,
+.webdev-cta {
+  font-family: "Poppins", sans-serif;
+}
+
+.webdev-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  border-radius: 35px;
+}
+
+.webdev-overlay {
+  text-align: left;
+  color: white;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 70px 40px;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin-top: 120px;
+}
+
+.webdev-overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.webdev-overlay p {
+  font-size: 1.15rem;
+  color: #f1f1f1;
+  line-height: 1.7;
+}
+
+.web-hero-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.web-hero-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.webdev-section {
+  padding: 80px 8%;
+  background: #fafafa;
+  text-align: center;
+}
+
+.webdev-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.webdev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.webdev-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.webdev-card:hover {
+  transform: translateY(-6px);
+}
+
+.webdev-img-container img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.webdev-card:hover img {
+  transform: scale(1.08);
+}
+
+.webdev-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.webdev-card:hover .webdev-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.webdev-hover h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.webdev-hover p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.webdev-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.webdev-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.webdev-cta {
+  text-align: center;
+  padding: 90px 7%;
+  background: linear-gradient(to right, #111, #222);
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 35px;
+}
+
+.webdev-cta h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.webdev-cta p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.webdev-cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.webdev-cta-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .webdev-overlay {
+    max-width: 850px;
+    padding: 60px 30px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 2.6rem;
+  }
+
+  .webdev-section {
+    padding: 70px 6%;
+  }
+}
+
+/* ====== Tablets Landscape (max-width: 992px) ====== */
+@media (max-width: 992px) {
+  .webdev-hero {
+    height: 70vh;
+  }
+
+  .webdev-overlay {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .webdev-overlay p {
+    font-size: 1.05rem;
+  }
+
+  .webdev-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .webdev-grid {
+    gap: 24px;
+  }
+
+  .webdev-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ====== Tablets Portrait (max-width: 768px) ====== */
+@media (max-width: 768px) {
+  .webdev-hero {
+    height: 65vh;
+  }
+
+  .webdev-overlay {
+    padding: 50px 25px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .webdev-overlay p {
+    font-size: 1rem;
+  }
+
+  .webdev-cta {
+    padding: 60px 5%;
+  }
+
+  .webdev-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .webdev-cta p {
+    font-size: 1rem;
+  }
+}
+
+/* ====== Mobile Large (max-width: 576px) ====== */
+@media (max-width: 576px) {
+  .webdev-hero {
+    height: 60vh;
+    margin-top: 100px;
+    border-radius: 25px;
+  }
+
+  .webdev-overlay {
+    margin-top: 60px;
+    padding: 40px 20px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .webdev-overlay p {
+    font-size: 0.95rem;
+  }
+
+  .webdev-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .webdev-img-container img {
+    height: 220px;
+  }
+
+  .webdev-cta {
+    padding: 50px 20px;
+  }
+
+  .webdev-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .webdev-cta p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ====== Mobile Small (max-width: 400px) ====== */
+@media (max-width: 400px) {
+  .webdev-overlay {
+    padding: 30px 15px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .webdev-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .webdev-cta-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ====== Mobile Tiny (max-width: 375px) ====== */
+@media (max-width: 375px) {
+  .webdev-hero {
+    height: 50vh;
+    margin-top: 80px;
+  }
+
+  .webdev-overlay h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .webdev-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .webdev-img-container img {
+    height: 180px;
+  }
+}

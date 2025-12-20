@@ -1,0 +1,383 @@
+/* =========================
+   SEO HERO
+========================= */
+.seo-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 120px;
+  border-radius: 35px;
+}
+
+.seo-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px;
+  border-radius: 35px;
+  max-width: 1100px;
+  text-align: left;
+  margin-top: 130px;
+}
+
+.seo-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.seo-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+.seo-hero-btn {
+  display: inline-block;
+  background: #fff;
+  color: black;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.seo-hero-btn:hover {
+  background: #777;
+  color: white;
+}
+
+/* =========================
+   SEO SECTION
+========================= */
+.seo-section {
+  padding: 80px 8%;
+  background-color: #f9fafc;
+  text-align: center;
+}
+
+.seo-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.seo-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.seo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.seo-img-container img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.seo-card:hover .seo-img-container img {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+.seo-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(30px);
+}
+
+.seo-card:hover .seo-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seo-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.seo-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+}
+
+.seo-btn {
+  background: white;
+  color: black;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.seo-btn:hover {
+  background: #777;
+  color: white;
+}
+
+/* =========================
+   SEO CTA
+========================= */
+.seo-cta {
+  background: linear-gradient(to right, #111, #222);
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 35px;
+}
+
+.seo-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.seo-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.seo-cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.seo-cta-btn:hover {
+  background-color: #777;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PROFESSIONAL MEDIA QUERIES
+========================= */
+
+/* Laptops / Large Tablets <= 1024px */
+@media (max-width: 1024px) {
+  .seo-hero {
+    height: 65vh;
+    margin-top: 100px;
+  }
+
+  .seo-overlay {
+    padding: 45px;
+    margin-top: 100px;
+  }
+
+  .seo-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .seo-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .seo-section h2 {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .seo-img-container img {
+    height: 240px;
+  }
+
+  .seo-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .seo-cta p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets <= 768px */
+@media (max-width: 768px) {
+  .seo-hero {
+    height: 55vh;
+    margin-top: 70px;
+  }
+
+  .seo-overlay {
+    padding: 30px;
+    margin-top: 60px;
+    border-radius: 25px;
+  }
+
+  .seo-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .seo-overlay p {
+    font-size: 0.95rem;
+  }
+
+  .seo-section {
+    padding: 60px 5%;
+  }
+
+  .seo-grid {
+    gap: 20px;
+  }
+
+  .seo-img-container img {
+    height: 200px;
+  }
+
+  .seo-cta {
+    padding: 60px 15px;
+  }
+
+  .seo-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .seo-cta p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile <= 480px */
+@media (max-width: 480px) {
+  .seo-hero {
+    height: 50vh;
+    margin-top: 50px;
+    border-radius: 20px;
+  }
+
+  .seo-overlay {
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+  }
+
+  .seo-overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .seo-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .seo-hero-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .seo-section {
+    padding: 40px 5%;
+  }
+
+  .seo-img-container img {
+    height: 160px;
+  }
+
+  .seo-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .seo-content p {
+    font-size: 0.9rem;
+  }
+
+  .seo-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .seo-cta {
+    padding: 40px 15px;
+  }
+
+  .seo-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .seo-cta p {
+    font-size: 0.9rem;
+  }
+
+  .seo-cta-btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Tiny (max-width: 375px) */
+@media (max-width: 375px) {
+  .seo-hero {
+    height: 45vh;
+    margin-top: 40px;
+  }
+  
+  .seo-overlay h1 {
+    font-size: 1.5rem;
+  }
+  
+  .seo-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .seo-img-container img {
+    height: 140px;
+  }
+  
+  .seo-cta h2 {
+    font-size: 1.4rem;
+  }
+  
+  .seo-cta-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}

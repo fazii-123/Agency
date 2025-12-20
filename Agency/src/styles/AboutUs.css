@@ -1,0 +1,480 @@
+.aboutus {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  padding: 0 15px;
+}
+
+.about-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+  border-radius: 35px;
+}
+
+.about-hero .overlay1 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px;
+  border-radius: 35px;
+  max-width: 1100px;
+  text-align: left;
+  margin-top: 280px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+.who-we-are {
+  text-align: center;
+  padding: 60px 15px;
+}
+
+.who-we-are h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.who-we-are p {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: 30px;
+  /* padding: 0 10px; */
+}
+
+.image-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  max-width: 550px;
+  height: 280px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 35px;
+  display: block;
+}
+
+.image-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.glassy-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px 24px;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease, background 0.3s;
+  cursor: pointer;
+}
+
+.image-card:hover .glassy-btn {
+  opacity: 1;
+}
+
+.glassy-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.core-values {
+  background-color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.core-values h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.choose {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 0 15px;
+}
+
+.values-left,
+.values-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+.value-card h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #111;
+}
+
+.value-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.values-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.values-center p {
+  max-width: 500px;
+  color: #444;
+  line-height: 1.8;
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .image-card {
+    height: 350px;
+  }
+  
+  .who-we-are h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero .overlay1 {
+    margin-left: 80px;
+    padding: 50px;
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .who-we-are {
+    padding: 80px 20px;
+  }
+  
+  .image-grid {
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .image-card {
+    height: 370px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .values-grid {
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 40px;
+  }
+  
+  .about-hero .overlay1 {
+    margin-left: 100px;
+    padding: 60px;
+  }
+  
+  .who-we-are {
+    padding: 100px 20px;
+  }
+  
+  .who-we-are h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-hero .overlay1 {
+    max-width: 1100px;
+    margin-left: 120px;
+  }
+  
+  .image-grid {
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .image-card {
+    border-radius: 35px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .about-hero h1,
+  .who-we-are h2,
+  .core-values h2 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===============================================
+   RESPONSIVE DESIGN - ABOUT US PAGE
+   =============================================== */
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .about-hero {
+    height: 60vh;
+    margin-top: 60px;
+    border-radius: 30px;
+  }
+  
+  .about-hero .overlay1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 35px;
+    margin-top: 200px;
+    border-radius: 25px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .who-we-are {
+    padding: 60px 20px;
+  }
+  
+  .who-we-are h2 {
+    font-size: 2rem;
+  }
+  
+  .image-card {
+    height: 250px;
+    max-width: 48%;
+  }
+  
+  .core-values {
+    padding: 80px 20px;
+  }
+  
+  .core-values h2 {
+    font-size: 2.5rem;
+  }
+  
+  .values-grid {
+    gap: 25px;
+  }
+}
+
+/* Tablet Small & Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .aboutus {
+    padding: 0 10px;
+  }
+  
+  .about-hero {
+    height: 50vh;
+    margin-top: 30px;
+    border-radius: 20px;
+  }
+  
+  .about-hero .overlay1 {
+    margin: 150px 20px 30px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+  }
+  
+  .about-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .who-we-are {
+    padding: 50px 15px;
+  }
+  
+  .who-we-are p {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+  
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .image-card {
+    max-width: 100%;
+    height: 280px;
+  }
+  
+  .core-values {
+    padding: 60px 15px;
+  }
+  
+  .core-values h2 {
+    font-size: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .values-left, .values-right {
+    gap: 20px;
+  }
+  
+  .value-card {
+    padding: 25px 20px;
+  }
+  
+  .values-center {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .about-hero {
+    height: 45vh;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .about-hero .overlay1 {
+    margin: 120px 15px 20px;
+    padding: 25px;
+    border-radius: 15px;
+  }
+  
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-hero p {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+  
+  .who-we-are {
+    padding: 40px 10px;
+  }
+  
+  .who-we-are h2 {
+    font-size: 1.8rem;
+  }
+  
+  .image-card {
+    height: 220px;
+    border-radius: 15px;
+  }
+  
+  .image-card img {
+    border-radius: 25px;
+  }
+  
+  .glassy-btn {
+    padding: 8px 18px;
+    font-size: 1rem;
+  }
+  
+  .core-values {
+    padding: 50px 10px;
+  }
+  
+  .core-values h2 {
+    font-size: 1.8rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.9rem;
+  }
+}
+

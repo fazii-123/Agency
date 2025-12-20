@@ -1,0 +1,371 @@
+.uiux-hero,
+.uiux-section,
+.uiux-cta {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.uiux-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 120px;
+  border-radius: 35px;
+}
+
+.uiux-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px;
+  border-radius: 35px;
+  max-width: 1000px;
+  text-align: left;
+  margin-top: 120px;
+}
+
+.uiux-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.uiux-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+.uiux-hero-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.uiux-hero-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.uiux-section {
+  padding: 80px 8%;
+  background-color: #f9fafc;
+  text-align: center;
+}
+
+.uiux-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.uiux-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.uiux-img-container img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.uiux-card:hover .uiux-img-container img {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+.uiux-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(30px);
+}
+
+.uiux-card:hover .uiux-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.uiux-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.uiux-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+}
+
+.uiux-btn {
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.uiux-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.uiux-cta {
+  background: linear-gradient(to right, #111, #222);
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 35px;
+}
+
+.uiux-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.uiux-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.uiux-cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.uiux-cta-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9c9c9c);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .uiux-hero {
+    height: 70vh;
+  }
+
+  .uiux-overlay {
+    padding: 50px;
+    margin-top: 100px;
+  }
+
+  .uiux-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .uiux-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .uiux-section {
+    padding: 60px 6%;
+  }
+
+  .uiux-section h2 {
+    font-size: 2rem;
+  }
+
+  .uiux-grid {
+    gap: 25px;
+  }
+
+  .uiux-img-container img {
+    height: 240px;
+  }
+
+  .uiux-content {
+    padding: 20px;
+  }
+
+  .uiux-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .uiux-hero {
+    height: 60vh;
+  }
+
+  .uiux-overlay {
+    padding: 40px;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .uiux-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .uiux-overlay p {
+    font-size: 1rem;
+  }
+
+  .uiux-section {
+    padding: 50px 5%;
+  }
+
+  .uiux-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .uiux-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .uiux-img-container img {
+    height: 220px;
+  }
+
+  .uiux-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .uiux-cta h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .uiux-hero {
+    height: 50vh;
+    margin-top: 80px;
+  }
+
+  .uiux-overlay {
+    padding: 30px;
+    margin-top: 60px;
+  }
+
+  .uiux-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .uiux-overlay p {
+    font-size: 0.95rem;
+  }
+
+  .uiux-section {
+    padding: 40px 4%;
+  }
+
+  .uiux-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .uiux-img-container img {
+    height: 180px;
+  }
+
+  .uiux-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .uiux-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .uiux-cta p {
+    font-size: 0.95rem;
+  }
+
+  .uiux-cta-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Tiny (max-width: 375px) */
+@media (max-width: 375px) {
+  .uiux-hero {
+    height: 45vh;
+    margin-top: 60px;
+  }
+  
+  .uiux-overlay h1 {
+    font-size: 1.5rem;
+  }
+  
+  .uiux-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .uiux-img-container img {
+    height: 160px;
+  }
+  
+  .uiux-cta h2 {
+    font-size: 1.4rem;
+  }
+  
+  .uiux-cta-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
