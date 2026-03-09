@@ -74,26 +74,21 @@ const AdminMessages = () => {
   }, [searchQuery, selectedFilter, submissions]);
 
   const handleStatusChange = async (id, newStatus) => {
+    // Optimistic update for better UX
+    const prevSubmissions = [...submissions];
+    setSubmissions(prevSubs =>
+      prevSubs.map(sub =>
+        sub.id === id ? { ...sub, status: newStatus } : sub
+      )
+    );
+
     try {
-      // Update locally first for better UX
-      setSubmissions(prevSubs =>
-        prevSubs.map(sub =>
-          sub.id === id ? { ...sub, status: newStatus } : sub
-        )
-      );
-      
-      // Make API call to update status on backend
       axios.defaults.withCredentials = true;
       await axios.patch(`/api/contact/${id}/`, { status: newStatus });
     } catch (error) {
       console.error('Error updating status:', error);
-      // Revert the change if API call fails
-      const response = await axios.get('/api/contact/');
-      const submissionsWithStatus = response.data.map(sub => ({
-        ...sub,
-        status: sub.status || 'new'
-      }));
-      setSubmissions(submissionsWithStatus);
+      // Revert optimistic update on failure
+      setSubmissions(prevSubmissions);
     }
   };
 

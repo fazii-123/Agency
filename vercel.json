@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "bash build.sh",
+  "outputDirectory": "Agency/dist",
+  "framework": null,
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.12",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index.py" },
+    { "source": "/admin/:path*", "destination": "/api/index.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated, loading, checkAuth } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
 
-  // Re-verify authentication when accessing protected routes
-  useEffect(() => {
-    checkAuth();
-  }, [checkAuth]);
+  // AuthContext already handles session validation on mount.
+  // No need to call checkAuth() again here — it causes double requests.
 
   if (loading) {
     return (

@@ -18,21 +18,16 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
-   
-      '/static/admin/': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/static\/admin/, '/static/admin')
-      },
 
-      '/admin/': {
+      // ONLY proxy Django's built-in admin panel (exact /admin/ path)
+      // React routes like /admin-login, /admin-dashboard are NOT proxied
+      '^/admin/': {
         target: 'http://localhost:8000',
         changeOrigin: true,
         secure: false,
       },
 
-      '/static/': {
+      '/static': {
         target: 'http://localhost:8000',
         changeOrigin: true,
         secure: false,
